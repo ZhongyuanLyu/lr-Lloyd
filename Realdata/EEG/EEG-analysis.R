@@ -9,11 +9,11 @@ load("data_tsr_S2match_nonzero.Rdata")
 # load("data_tsr_all_nonzero.Rdata")
 scale_tsr <- aperm(apply(data_tsr,c(1,2), scale),c(2,3,1))
 data_tsr <- as.tensor(scale_tsr)
-screeplot(princomp(t(k_unfold(data_tsr, m=1)@data)), npcs = 5, 
+screeplot(princomp(t(k_unfold(data_tsr, m=1)@data)), npcs = 5,  lwd = 5,
           cex.lab=1.5, cex.axis=1, cex.main=5, cex.sub=2,
           type = "lines", main = "Scree plot of EEG: Mode 1")
 
-screeplot(princomp(t(k_unfold(data_tsr, m=2)@data)), npcs = 5, 
+screeplot(princomp(t(k_unfold(data_tsr, m=2)@data)), npcs = 5,  lwd = 5,
           cex.lab=1.5, cex.axis=1, cex.main=5, cex.sub=2,
           type = "lines", main = "Scree plot of EEG: Mode 2")
 

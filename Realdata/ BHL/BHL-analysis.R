@@ -16,11 +16,11 @@ persp3d(x = c(1:1124), y=seq(1,4), z = scale_tsr[,,1], col="burlywood1",
 
 
 
-screeplot(princomp(k_unfold(data_tsr, m=1)@data), npcs = 4, 
+screeplot(princomp(k_unfold(data_tsr, m=1)@data), npcs = 4,  lwd = 5,
           cex.lab=1.5, cex.axis=1, cex.main=5, cex.sub=2,
           type = "lines", main = "Scree plot of BHL: Mode 1")
 
-screeplot(princomp(t(k_unfold(data_tsr, m=2)@data)), npcs = 4, 
+screeplot(princomp(t(k_unfold(data_tsr, m=2)@data)), npcs = 4,  lwd = 5,
           cex.lab=1.5, cex.axis=1, cex.main=5, cex.sub=2,
           type = "lines", main = "Scree plot of BHL: Mode 2")
 
